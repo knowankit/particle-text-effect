@@ -47,7 +47,21 @@ module.exports = env => {
     resolve: {
       extensions: [".js", ".jsx"]
     },
-    plugins: [new CleanWebpackPlugin()]
+    plugins: [new CleanWebpackPlugin()],
+    externals: {
+      react: {
+        root: "React",
+        commonjs2: "react",
+        commonjs: "react",
+        amd: "react"
+      },
+      "react-dom": {
+        root: "ReactDOM",
+        commonjs2: "react-dom",
+        commonjs: "react-dom",
+        amd: "react-dom"
+      }
+    }
   };
 
   if (env.development) {

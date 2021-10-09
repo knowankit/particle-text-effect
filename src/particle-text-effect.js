@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const ParticleTextEffect = ({ text, type }) => {
+const ParticleTextEffect = ({ text, type, className }) => {
   useEffect(() => {
     initparticles();
   }, []);
@@ -155,7 +155,7 @@ const ParticleTextEffect = ({ text, type }) => {
     return (
       <>
         <div className="textcontainer">
-          <span className={`particletext bubbles`}>{text}</span>
+          <span className="particletext bubbles">{text}</span>
         </div>
         <style jsx="true">
           {`
@@ -466,12 +466,13 @@ const ParticleTextEffect = ({ text, type }) => {
         {`
           .textcontainer {
             text-align: center;
-            font-family: "bebas", sans-serif;
+            font-family: inherit;
+            font-size: inherit;
           }
 
           .particletext {
             text-align: center;
-            font-size: 48px;
+            font-size: inherit;
             position: relative;
           }
         `}
