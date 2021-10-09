@@ -3,6 +3,13 @@ import ReactDom from "react-dom";
 import ParticleTextEffect from "./particle-text-effect";
 
 ReactDom.render(
-  <ParticleTextEffect text="Hello World!" type="hearts" />,
+  <>
+    <ParticleTextEffect text="Hearts" type="hearts" />
+    <ParticleTextEffect text="BEAM" type="sunbeams" />
+    <ParticleTextEffect text="LINES" type="lines" />
+    <ParticleTextEffect text="BUBBLES" type="bubbles" />
+    <ParticleTextEffect text="CONFETTI" type="confetti" />
+    <ParticleTextEffect text="FIRE" type="fire" />
+  </>,
   document.getElementById("app")
 );

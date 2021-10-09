@@ -6,10 +6,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = env => {
   const config = {
     mode: env.development ? "development" : "production",
-    devtool: env.development ? "inline-source-map" : "",
+    devtool: "inline-source-map",
     entry: env.development
       ? `${path.resolve(__dirname, "./src/index.js")}`
-      : `${path.resolve(__dirname, "./src/example-component.js")}`,
+      : `${path.resolve(__dirname, "./src/particle-text-effect.js")}`,
     devServer: {
       port: 3000,
       watchContentBase: true,
